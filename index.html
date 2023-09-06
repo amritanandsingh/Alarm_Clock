@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Current Time</title>
+    <title>Alarm Clock</title>
     <style>
         #clock {
             font-size: 24px;
@@ -10,6 +10,15 @@
 </head>
 <body>
     <div id="clock"></div>
-    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+    <form id="alarmForm">
+        <label for="alarmTime">Set Alarm Time:</label>
+        <input type="time" id="alarmTime" required>
+        <button type="submit">Set Alarm</button>
+    </form>
+    <ul id="alarmsList">
+        <!--all Alarms will be displayed here -->
+    </ul>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
 </body>
 </html>
