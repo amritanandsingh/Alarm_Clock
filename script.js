@@ -39,9 +39,8 @@ function displayAlarms() {
         var deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', function () {
-            deleteAlarm(index);
+        deleteAlarm(index);
         });
-
         li.appendChild(deleteButton);
         alarmsList.appendChild(li);
     });

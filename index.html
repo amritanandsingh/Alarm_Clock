@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Alarm Clock</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         #clock {
             font-size: 24px;
@@ -9,16 +11,33 @@
     </style>
 </head>
 <body>
-    <div id="clock"></div>
-    <form id="alarmForm">
-        <label for="alarmTime">Set Alarm Time:</label>
-        <input type="time" id="alarmTime" required>
-        <button type="submit">Set Alarm</button>
-    </form>
-    <ul id="alarmsList">
-        <!--all Alarms will be displayed here -->
-    </ul>
+    <div class="container">
+        <!-- Bootstrap container for content -->
+        <h1 class="mt-5">Alarm Clock</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div id="clock"></div>
+                <form id="alarmForm" class="mt-4">
+                    <div class="form-group">
+                        <label for="alarmTime">Set Alarm Time:</label>
+                        <input type="time" id="alarmTime" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Set Alarm</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Alarms List</h3>
+                <ul id="alarmsList" class="list-group">
+                    <!-- All alarms will be displayed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
     <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <!-- Add Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
